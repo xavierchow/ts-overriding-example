@@ -2,7 +2,7 @@ import { B } from './b';
 
 export class A {
   constructor() {
-    return new B();
+    return new B(); // the new constructed B instance will be `this`
   }
 
   doSth() {
