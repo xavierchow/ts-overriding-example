@@ -1,6 +1,5 @@
 import { A } from './a';
 
-// const a = new A();
-const a = A.create();
+const a = new A();
 
 a.doSth();
