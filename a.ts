@@ -3,9 +3,8 @@ import { B } from './b';
 export class A {
   private foo: string;
   constructor() {
-    const a = new A();
-    applyMixins(a, B);
-    return a;
+    applyMixins(A, B);
+    return new A();
   }
 
   doSth() {
