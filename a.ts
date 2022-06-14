@@ -2,9 +2,12 @@ import { B } from './b';
 
 export class A {
   private foo: string;
-  constructor() {
+  constructor({ overriding = false } = {}) {
+    if (overriding) {
+      return;
+    }
     applyMixins(A, B);
-    return new A();
+    return new A({ overriding: true });
   }
 
   doSth() {
